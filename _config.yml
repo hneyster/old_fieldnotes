@@ -1,4 +1,3 @@
 name: Eyster Field Notes
-markdown: kramdown
-paginate: 1
 permalink: /fieldnotes/:title.html
+markdown: kramdown

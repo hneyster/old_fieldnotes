@@ -114,6 +114,12 @@ img{
     font-weight: 800;
 }
 
+#entry-title {
+    margin: 10px;
+    font-size: 21px;
+    font-weight: 800;
+}
+
 ul.comicNav {
 	padding:0;
 	list-style-type:none;
