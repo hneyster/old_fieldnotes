@@ -31,27 +31,54 @@ Eyster Field Notes updates every day, unless we're in the field.
 <div id="ctitle"> {{ page.title }}</div>
 <ul class="comicNav">
 <li><a href="./1">|&lt;</a></li>
-<li><a rel="prev" href="{{ppu}}" accesskey="p">&lt; Prev</a></li>
-<li><a href="http://nature.eyster.com/random/note">Random</a></li>
-<li><a rel="next" href="{{page.next.url}}" accesskey="n">Next &gt;</a></li>
-<li><a href="./last">|&gt;</a></li>
+ {% assign post = site.posts.first %}
+{% assign lastnum = post.number%}
+{% if page.number >1 %}
+	 {% assign prevpage = page.number| minus: 1 %}
+{% else %}
+	{% assign prevpage =  1%}
+{% endif %}
+	<li><a rel="prev" href="./{{prevpage}}" accesskey="p">&lt; Prev</a></li>
+	
+<!-- <li><a href="http://nature.eyster.com/random/note">Random</a></li> -->
+{% if page.number < lastnum %}
+	{% assign nextpage = page.number| plus: 1 %}
+{% else %}
+	 {% assign nextpage = ""%}
+{% endif %}
+
+<li><a rel="next" href="./{{nextpage}}"accesskey="n">Next &gt;</a></li>
+<li><a href="./">|&gt;</a></li> 
 </ul>
 <div id="comic">
-    {{content}}
+	<img src="{{page.image1}}" title="{{page.mouse1}}">
+	<img src="{{page.image2}}" title="{{page.mouse2}}" >
 </div>
 <ul class="comicNav">
 <li><a href="./1">|&lt;</a></li>
-<li><a rel="prev" href="{{page.previous.url}}" accesskey="p">&lt; Prev</a></li>
-<li><a href="http://nature.eyster.com/random/note/">Random</a></li>
-<li><a rel="next" href="{{page.next.url}}" accesskey="n">Next &gt;</a></li>
-<li><a href="./last">|&gt;</a></li>
+ {% assign post = site.posts.first %}
+{% assign lastnum = post.number%}
+{% if page.number >1 %}
+	 {% assign prevpage = page.number| minus: 1 %}
+{% else %}
+	{% assign prevpage =  1%}
+{% endif %}
+	<li><a rel="prev" href="./{{prevpage}}" accesskey="p">&lt; Prev</a></li>
+<!-- <li><a href="http://nature.eyster.com/random/note">Random</a></li> -->
+{% if page.number < lastnum %}
+	{% assign nextpage = page.number| plus: 1 %}
+{% else %}
+	 {% assign nextpage = ""%}
+{% endif %}
 
+<li><a rel="next" href="./{{nextpage}}"accesskey="n">Next &gt;</a></li>
+<li><a href="./">|&gt;</a></li> 
 </ul>
 <br>
 
 <div id="licenseText">
 <p>
-This work is licensed under a
+This work is licensed under a 
 <a href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 License</a>.
 </p>
 </div>
