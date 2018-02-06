@@ -40,28 +40,30 @@ Eyster Field Notes updates every day, unless we're in the field.
 <li><a href="./1">|&lt;</a></li>
 <li><a rel="prev" href= "./{{ post.number| minus: 1}}" accesskey="p">&lt; Prev</a></li>
 <!-- <li><a href="http://nature.eyster.com/random/note">Random</a></li> -->
-<li><a rel="next" href= "./" accesskey="p">&lt; Next</a></li>
-<li><a href="./">|&gt;</a></li>
+<li><a rel="next" href= "./" accesskey="p"> Next &gt;</a></li>
+<li><a href="./">&gt;|</a></li>
 </ul>
 <div id="comic">
-	<img src="{{post.image1}}" title="{{post.mouse1}}">
-	<img src="{{post.image2}}" title="{{post.mouse2}}" >
+	<a href = "{{post.image1}}"><img src="{{post.image1}}" title="{{post.mouse1}}" alt="image1"></a>
+	<a href = "{{post.image2}}"><img src="{{post.image2}}"  title="{{post.mouse2}}" alt="image2"></a>
 </div>
-<ul class="comicNav">
+<div class="row">
+  <div class="column"> {{post.label1}}</div>
+  <div class="column"> {{post.label2}} </div>
+</div>
+<!-- <ul class="comicNav">
 <li><a href="./1">|&lt;</a></li>
 <li><a rel="prev" href= "./{{ post.number| minus: 1}}" accesskey="p">&lt; Prev</a></li>
-<!-- <li><a href="http://nature.eyster.com/random/note/">Random</a></li>
- -->
- <li><a rel="next" href= "./" accesskey="p">&lt; Next</a></li>
-<li><a href="./">|&gt;</a></li>
-
-</ul>
+<!-- <li><a href="http://nature.eyster.com/random/note">Random</a></li> -->
+<!--<li><a rel="next" href= "./" accesskey="p">Next &gt</a></li>
+<li><a href="./">&gt;|</a></li>
+</ul> -->
 <br>
 
 <div id="licenseText">
 <p>
-This work is licensed under a 
-<a href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 License</a>.
+&copy Harold Eyster/Artemis Eyster
+<!-- <a href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 License</a>. -->
 </p>
 </div>
 </div>

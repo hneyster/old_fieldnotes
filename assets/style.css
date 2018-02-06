@@ -1,10 +1,10 @@
 /* START GENERAL FORMAT */
 body{
-	background-color:#ABEBC6;
+	background-color:	#000000;
 	text-align:center;
 	font-size:16px;
 	font-variant:small-caps;
-	font-family:Lucida,Helvetica,sans-serif;
+	font-family:Georgia;
 	font-weight:500;
 	text-decoration: none;
 	position: absolute;
@@ -120,6 +120,19 @@ img{
     font-weight: 800;
 }
 
+.column {
+    float: left;
+    width: 50%;
+	text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 ul.comicNav {
 	padding:0;
 	list-style-type:none;
@@ -193,8 +206,3 @@ ul.comicNav a:hover, ul.comicNav a:focus {
 #comic .panel, #comic .cover, #comic .panel img { position:absolute; }
 #comic .cover { z-index:10; }
 #comic table { margin: auto; }
-
-@font-face {
-  font-family: 'xkcd-Regular';
-  src: url('//xkcd.com/fonts/xkcd-Regular.eot?') format('eot'), url('//xkcd.com/fonts/xkcd-Regular.otf') format('opentype');
-}
