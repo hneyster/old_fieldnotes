@@ -1,3 +1,3 @@
 name: Eyster Field Notes
-permalink: /fieldnotes/:title.html
+permalink: /:title.html
 markdown: kramdown
